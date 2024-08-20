@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ArtSpace</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="imageDescription">i stock image</string>
+    <string name="title_1">Mona Lisa</string>
+    <string name="artist_1">Leonardo da Vinci</string>
+    <string name="year_1">1519</string>
+    <string name="title_2">The scream</string>
+    <string name="artist_2">" Edvard Munch"</string>
+    <string name="year_2">1910</string>
+    <string name="title_3">Guernica</string>
+    <string name="year_3">1937</string>
+    <string name="description_1">image painted by Leonardo Da Vinci between 1503 and 1519</string>
+    <string name="description_2">The Scream is a composition created by Norwegian artist Edvard Munch in 1893.</string>
+    <string name="description_3">Guernica (Spanish: [ɡeɾˈnika]; Basque: [ɡernika]) is a large 1937 oil painting by Spanish artist Pablo Picasso.</string>
+    <string name="artist_3">Pablo Picasso</string>
+</resources>
