@@ -137,30 +137,27 @@ fun ArtSpace(modifier: Modifier = Modifier) {
     }
     Column(
         modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp),
+            .fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center,
-            modifier = Modifier
-                .weight(6f)
-                .padding(16.dp),
+            modifier = Modifier.padding(top=16.dp, start = 32.dp, end =32.dp)
+                .weight(7f),
             content = ArtWorkSpace(resourceId, imageDescriptionId)
         )
         Row(
             Modifier
                 .weight(1f)
-                .padding(16.dp)
+                .padding(start =32.dp, end = 32.dp)
                 .fillMaxWidth()
         ) {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center,
                 modifier = Modifier
-                    .padding(2.dp)
                     .background(color = MaterialTheme.colorScheme.primaryContainer)
                     .fillMaxSize(),
                 content = ArtistPresentation(title, artist, year)
@@ -171,7 +168,7 @@ fun ArtSpace(modifier: Modifier = Modifier) {
             horizontalArrangement = Arrangement.Start,
             modifier = Modifier
                 .weight(1f)
-                .padding(16.dp)
+                .padding(32.dp)
                 .fillMaxWidth(),
             content = NavigationSection(nextBehavior, previousBehavior)
         )
@@ -184,7 +181,7 @@ private fun ArtWorkSpace(
 ): @Composable() (RowScope.() -> Unit) = {
     Surface(
         tonalElevation = 32.dp,
-        modifier = Modifier,
+        modifier = Modifier.padding(bottom = 10.dp),
         color = MaterialTheme.colorScheme.onPrimary
     ) {
         Image(
@@ -192,7 +189,7 @@ private fun ArtWorkSpace(
             contentDescription = stringResource(imageDescriptionId),
             contentScale = ContentScale.Crop,
             modifier = Modifier
-                .padding(16.dp)
+                .padding(32.dp)
                 .fillMaxSize()
                 .border(
                     BorderStroke(1.dp, Color.Gray), RectangleShape
