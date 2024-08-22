@@ -16,12 +16,14 @@ import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
@@ -136,21 +138,20 @@ fun ArtSpace(modifier: Modifier = Modifier) {
         }
     }
     Column(
-        modifier = Modifier
-            .fillMaxSize(),
-        verticalArrangement = Arrangement.Center,
+        modifier = Modifier,
+        verticalArrangement = Arrangement.Bottom,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center,
             modifier = Modifier.padding(top=16.dp, start = 32.dp, end =32.dp)
-                .weight(7f),
+                .weight(7f).wrapContentSize(),
             content = ArtWorkSpace(resourceId, imageDescriptionId)
         )
         Row(
             Modifier
-                .weight(1f)
+                .weight(0.5f)
                 .padding(start =32.dp, end = 32.dp)
                 .fillMaxWidth()
         ) {
@@ -189,8 +190,7 @@ private fun ArtWorkSpace(
             contentDescription = stringResource(imageDescriptionId),
             contentScale = ContentScale.Crop,
             modifier = Modifier
-                .padding(32.dp)
-                .fillMaxSize()
+                .padding(32.dp).wrapContentSize()
                 .border(
                     BorderStroke(1.dp, Color.Gray), RectangleShape
                 )
